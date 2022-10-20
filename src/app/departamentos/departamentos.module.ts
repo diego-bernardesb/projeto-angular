@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MaterialFeatureModule } from '../shared/material-feature/material-feature.module';
 
 import { DepartamentosRoutingModule } from './departamentos-routing.module';
 import { ProdutosComponent } from './produtos/produtos.component';
@@ -11,7 +12,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
   ],
   imports: [
     CommonModule,
-    DepartamentosRoutingModule
+    DepartamentosRoutingModule,
+    MaterialFeatureModule
   ]
 })
 export class DepartamentosModule { }

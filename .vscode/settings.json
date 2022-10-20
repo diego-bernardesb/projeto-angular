@@ -1,0 +1,8 @@
+{
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    "workbench.colorCustomizations": {
+        "[Default Dark+]": {},
+    "[Abyss]": {}
+    },
+    "editor.bracketPairColorization.enabled": false
+}
