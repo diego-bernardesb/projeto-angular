@@ -6,3 +6,11 @@ mat-card {
   width: 60%;
   margin: auto;
 }
+
+.spinner{
+  background: rgba($color: #b6b6b6, $alpha: 0.60);
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

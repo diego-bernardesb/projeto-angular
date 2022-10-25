@@ -10,7 +10,7 @@ import { ProdutoService } from '../services/produto.service';
 })
 export class ProdutosComponent implements OnInit {
 
-  produtos: Observable<Produto[]>;
+  produtos$: Observable<Produto[]>;
   displayedColumns = [
     'name',
     'category',
@@ -21,7 +21,7 @@ export class ProdutosComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService
     ) {
-      this.produtos = this.produtoService.listProduct();
+      this.produtos$ = this.produtoService.listProduct();
     }
     
   ngOnInit(): void {
