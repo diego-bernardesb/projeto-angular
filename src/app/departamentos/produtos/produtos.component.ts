@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
+import { ErrorDialogComponent } from 'src/app/shared/error-dialog/error-dialog.component';
 import { Produto } from '../model/produto';
 import { ProdutoService } from '../services/produto.service';
 
@@ -19,9 +21,20 @@ export class ProdutosComponent implements OnInit {
   ];
 
   constructor(
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    public dialog: MatDialog
     ) {
-      this.produtos$ = this.produtoService.listProduct();
+      this.produtos$ = this.produtoService.listProduct()
+      .pipe(
+        catchError(error => {
+          this.showError();
+          return of([]);
+        })
+      );
+    }
+
+    showError() {
+      this.dialog.open(ErrorDialogComponent);
     }
     
   ngOnInit(): void {

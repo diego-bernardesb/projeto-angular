@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, Observable } from 'rxjs';
+import { delay, first, Observable, tap } from 'rxjs';
 import { Produto } from '../model/produto';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Produto } from '../model/produto';
 })
 export class ProdutoService {
 
-  private readonly API = '/assets/api.json';
+  private readonly API = '/assets/aapi.json';
 
   constructor(
     private httpCliente: HttpClient
@@ -17,7 +17,9 @@ export class ProdutoService {
   listProduct(): Observable<Produto[]>{
     return this.httpCliente.get<Produto[]>(this.API)
     .pipe(
-      delay(3000)
+      first(),
+      delay(3000),
+      tap(product => console.log(product))
     );
   }
   
