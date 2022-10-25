@@ -1,0 +1,12 @@
+[
+    { "_id": 1 ,"name": "lapis", "category": "escritorio", "quantity": 150, "price": 1.50 },
+    { "_id": 2 ,"name": "caneta", "category": "escritorio", "quantity": 450, "price": 2.50 },
+    { "_id": 3 ,"name": "borracha", "category": "escritorio", "quantity": 50, "price": 0.50 },
+    { "_id": 4 ,"name": "resma de papel", "category": "escritorio", "quantity": 40, "price": 24.50 },
+    { "_id": 5 ,"name": "grampeador", "category": "escritorio", "quantity": 20, "price": 14.50 },
+    { "_id": 6 ,"name": "mouse", "category": "eletronicos", "quantity": 10, "price": 42.20 },
+    { "_id": 7 ,"name": "teclado sem fio", "category": "eletronicos", "quantity": 7, "price": 78.90 },
+    { "_id": 8 ,"name": "cabo hdmi", "category": "eletronicos", "quantity": 3, "price": 23.10 },
+    { "_id": 9 ,"name": "pen drive", "category": "eletronicos", "quantity": 56, "price": 32.50 },
+    { "_id": 10 ,"name": "hub usb", "category": "eletronicos", "quantity": 3, "price": 90.00 }
+  ]

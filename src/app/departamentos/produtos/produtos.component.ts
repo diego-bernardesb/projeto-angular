@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Produto } from '../model/produto';
 import { ProdutoService } from '../services/produto.service';
 
@@ -9,7 +10,7 @@ import { ProdutoService } from '../services/produto.service';
 })
 export class ProdutosComponent implements OnInit {
 
-  produtos: Produto[] = [];
+  produtos: Observable<Produto[]>;
   displayedColumns = [
     'name',
     'category',
@@ -19,10 +20,11 @@ export class ProdutosComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService
-  ) {}
-  
+    ) {
+      this.produtos = this.produtoService.listProduct();
+    }
+    
   ngOnInit(): void {
-    this.produtos = this.produtoService.listProduct();
   }
 
 }

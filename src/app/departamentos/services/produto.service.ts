@@ -1,5 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Produto } from '../model/produto';
 
 @Injectable({
@@ -7,18 +8,14 @@ import { Produto } from '../model/produto';
 })
 export class ProdutoService {
 
+  private readonly API = '/assets/api.json';
+
   constructor(
-    private httpCliente: HttpClientModule
+    private httpCliente: HttpClient
   ) {}
 
-  listProduct(): Produto[]{
-    return [
-      { _id: 1 ,name: 'lapis', category: 'escritorio', quantity: 150, price: 1.50 },
-      { _id: 1 ,name: 'caneta', category: 'escritorio', quantity: 450, price: 2.50 },
-      { _id: 1 ,name: 'borracha', category: 'escritorio', quantity: 50, price: 0.50 },
-      { _id: 1 ,name: 'resma de papel', category: 'escritorio', quantity: 40, price: 24.50 },
-      { _id: 1 ,name: 'grampeador', category: 'escritorio', quantity: 20, price: 14.50 }
-    ]
+  listProduct(): Observable<Produto[]>{
+    return this.httpCliente.get<Produto[]>(this.API);
   }
   
 }
