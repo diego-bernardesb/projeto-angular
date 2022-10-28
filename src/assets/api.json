@@ -8,5 +8,8 @@
     { "_id": 7 ,"name": "teclado sem fio", "category": "eletronicos", "quantity": 7, "price": 78.90 },
     { "_id": 8 ,"name": "cabo hdmi", "category": "eletronicos", "quantity": 3, "price": 23.10 },
     { "_id": 9 ,"name": "pen drive", "category": "eletronicos", "quantity": 56, "price": 32.50 },
-    { "_id": 10 ,"name": "hub usb", "category": "eletronicos", "quantity": 3, "price": 90.00 }
+    { "_id": 10 ,"name": "game boy", "category": "games", "quantity": 56, "price": 32.50 },
+    { "_id": 11 ,"name": "fruteira", "category": "artigos-domesticos", "quantity": 56, "price": 32.50 },
+    { "_id": 12 ,"name": "mochila", "category": "material-escolar", "quantity": 56, "price": 32.50 },
+    { "_id": 13 ,"name": "hub usb", "category": "eletronicos", "quantity": 3, "price": 90.00 }
   ]
