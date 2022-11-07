@@ -16,8 +16,8 @@ export class ProdutosComponent implements OnInit {
   displayedColumns = [
     'name',
     'category',
-    'quantity',
-    'price'
+    'quantity'
+    // 'price'
   ];
 
   constructor(

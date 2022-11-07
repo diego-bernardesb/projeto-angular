@@ -8,7 +8,7 @@ import { Produto } from '../model/produto';
 })
 export class ProdutoService {
 
-  private readonly API = '/assets/api.json';
+  private readonly API = '/api/products';
 
   constructor(
     private httpCliente: HttpClient
@@ -18,7 +18,7 @@ export class ProdutoService {
     return this.httpCliente.get<Produto[]>(this.API)
     .pipe(
       first(),
-      delay(1000),
+      delay(800),
       tap(product => console.log(product))
     );
   }
